@@ -20,6 +20,10 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 
-Your database should contain the following four models, including the requirements listed for each model:
+VIDEO LINKS: 
 
-After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
+PART 1: https://drive.google.com/file/d/1798d2fkZvxrJGq0dATxGEMU2YXfm_zfc/view?usp=sharing
+PART 2: https://drive.google.com/file/d/1DTIn1KLwIn-R7uznTeO_GKh9R1CXs8Dx/view?usp=sharing
+
+GitHub Repo: https://github.com/bshort985/eCommerceBackend
+
