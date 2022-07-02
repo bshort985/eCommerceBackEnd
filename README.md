@@ -22,3 +22,4 @@ THEN I am able to successfully create, update, and delete data in my database
 
 Your database should contain the following four models, including the requirements listed for each model:
 
+After creating the models and routes, run npm run seed to seed data to your database so that you can test your routes.
