@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
       res.status(404).json({ message: "No tag with this ID!" });
       return;
     }
-    res.json(category);
+    res.json(tag);
   })
   .catch((err) => res.status(500))
 });
@@ -57,25 +57,19 @@ router.put('/:id', (req, res) => {
       res.status(404).json({ message: "No tag with this ID!" });
       return;
     }
-    res.json(category);
+    res.json(tag);
   })
   .catch((err) => res.status(500))
 });
 
 router.delete('/:id', (req, res) => {
-  Tag.destroy(req.body, {
+  Tag.destroy({
     where: {
-      id: req.params.id
+      id: req.params.id,
     },
   })
-  .then((tag) => {
-    if (!tag) {
-      res.status(404).json({ message: "No tag with this ID!" });
-      return;
-    }
-    res.json(category);
-  })
-  .catch((err) => res.status(500))
+    .then((tag) => res.status(200).json(tag))
+    .catch((err) => res.status(400).json(err));
 });
 
 module.exports = router;

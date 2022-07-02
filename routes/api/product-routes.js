@@ -123,21 +123,15 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
-  Product.destroy(req.body, {
-    where: {
-      id: req.params.id
-    },
-  })
-  .then((product) => {
-    if (!product) {
-      res.status(404).json({ message: "No product with this ID!" });
-      return;
-    }
-    res.json(category);
-  })
-  .catch((err) => res.status(500))
-});
+  router.delete('/:id', (req, res) => {
+    Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((product) => res.status(200).json(product))
+      .catch((err) => res.status(400).json(err));
+  });
 
 module.exports = router;
