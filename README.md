@@ -22,29 +22,3 @@ THEN I am able to successfully create, update, and delete data in my database
 
 Your database should contain the following four models, including the requirements listed for each model:
 
-
-
-*Tag
--id
-Integer
-Doesn't allow null values
-Set as primary key
-Uses auto increment
-
--tag_name
-String
-
-*ProductTag
--id
-Integer
-Doesn't allow null values
-Set as primary key
-Uses auto increment
-
--product_id
-Integer
-References the product model's id
-
--tag_id
-Integer
-References the tag model's id
